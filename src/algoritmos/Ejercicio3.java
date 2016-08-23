@@ -89,59 +89,53 @@ public class Ejercicio3 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 373, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCalcularActionPerformed
-       String sf;
-        double si,bonif,op=0;
-       if(txtSaldoInicial.getText().trim().isEmpty()){
-           JOptionPane.showMessageDialog(this, "Digite Saldo Inicial","ERROR",JOptionPane.ERROR_MESSAGE);
-           txtSaldoInicial.requestFocusInWindow();
-       }else{
-           
-           si=Double.parseDouble(txtSaldoInicial.getText());
-           bonif=(si*1.5)/100;
-           op=si+bonif;
-       }
-       sf=String.valueOf(op);
-       txtSaldoFinal.setText(sf);
-       
-       
+        String sf;
+        double si, bonif, op = 0;
+        if (txtSaldoInicial.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Digite Saldo Inicial", "ERROR", JOptionPane.ERROR_MESSAGE);
+            txtSaldoInicial.requestFocusInWindow();
+        } else {
+
+            si = Double.parseDouble(txtSaldoInicial.getText());
+            bonif = (si * 1.5) / 100;
+            op = si + bonif;
+        }
+        sf = String.valueOf(op);
+        txtSaldoFinal.setText(sf);
+
+
     }//GEN-LAST:event_cmdCalcularActionPerformed
 
     private void cmdBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBorrarActionPerformed
         txtSaldoInicial.setText("");
         txtSaldoFinal.setText("");
-        
+
         txtSaldoInicial.requestFocusInWindow();
     }//GEN-LAST:event_cmdBorrarActionPerformed
 
     private void txtSaldoInicialKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSaldoInicialKeyTyped
-         char c=evt.getKeyChar(); 
-             
-         
-          if(!Character.isDigit(c)) { 
-              getToolkit().beep(); 
-               
-              evt.consume(); }
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
     }//GEN-LAST:event_txtSaldoInicialKeyTyped
 
     private void txtSaldoFinalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSaldoFinalKeyTyped
-          char c=evt.getKeyChar(); 
-             
-         
-          if(!Character.isDigit(c)) { 
-              getToolkit().beep(); 
-               
-              evt.consume(); }
+
     }//GEN-LAST:event_txtSaldoFinalKeyTyped
 
     /**
